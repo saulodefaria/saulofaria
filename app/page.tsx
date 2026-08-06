@@ -346,15 +346,22 @@ export default function HomePage() {
           <div className="col-start-2 grid grid-cols-2 gap-[clamp(22px,2.4vw,40px)] max-[820px]:grid-cols-1 max-[820px]:gap-18.5">
             {featuredProjects.map((project) => (
               <article className="border-t-2 border-ink pt-4.5" key={project.title}>
-                <figure className="relative aspect-5/3 overflow-hidden rounded-lg border border-line bg-[#fdfbf7]">
-                  <Image
-                    className="object-contain object-center"
-                    src={project.image}
-                    alt={project.imageAlt}
-                    fill
-                    sizes="(max-width: 820px) calc(100vw - 44px), 35vw"
-                  />
-                </figure>
+                <a
+                  className="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red"
+                  href={project.links[0].href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open ${project.title}`}>
+                  <figure className="relative aspect-5/3 overflow-hidden rounded-lg border border-line bg-[#fdfbf7]">
+                    <Image
+                      className="object-contain object-center transition-transform duration-500 ease-out motion-safe:group-hover:-translate-y-1 motion-safe:group-hover:scale-[1.025] motion-safe:group-focus-visible:-translate-y-1 motion-safe:group-focus-visible:scale-[1.025]"
+                      src={project.image}
+                      alt={project.imageAlt}
+                      fill
+                      sizes="(max-width: 820px) calc(100vw - 44px), 35vw"
+                    />
+                  </figure>
+                </a>
 
                 <div className="mt-4.5 flex items-center justify-between gap-5 text-[.67rem] font-[810] uppercase tracking-widest text-red max-[520px]:items-start">
                   <span>{project.number}</span>
@@ -391,15 +398,22 @@ export default function HomePage() {
           <div className="col-span-full mt-[clamp(88px,10vw,152px)] grid grid-cols-3 gap-[clamp(26px,3.4vw,54px)] max-[820px]:grid-cols-1 max-[820px]:gap-17.5">
             {moreProjects.map((project) => (
               <article className="border-t border-ink pt-3.5" key={project.title}>
-                <figure className="relative aspect-5/3 overflow-hidden rounded-lg border border-line bg-[#fdfbf7]">
-                  <Image
-                    className="object-contain object-center"
-                    src={project.image}
-                    alt={project.imageAlt}
-                    fill
-                    sizes="(max-width: 820px) calc(100vw - 44px), 31vw"
-                  />
-                </figure>
+                <a
+                  className="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red"
+                  href={project.liveUrl ?? project.repoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open ${project.title}`}>
+                  <figure className="relative aspect-5/3 overflow-hidden rounded-lg border border-line bg-[#fdfbf7]">
+                    <Image
+                      className="object-contain object-center transition-transform duration-500 ease-out motion-safe:group-hover:-translate-y-1 motion-safe:group-hover:scale-[1.025] motion-safe:group-focus-visible:-translate-y-1 motion-safe:group-focus-visible:scale-[1.025]"
+                      src={project.image}
+                      alt={project.imageAlt}
+                      fill
+                      sizes="(max-width: 820px) calc(100vw - 44px), 31vw"
+                    />
+                  </figure>
+                </a>
                 <p className="mt-4.5 flex items-center justify-between gap-5 text-[.67rem] font-[810] uppercase tracking-widest text-red max-[520px]:items-start">
                   <span>{project.number}</span>
                   <span className="text-right">{project.category}</span>
