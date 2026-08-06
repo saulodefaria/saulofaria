@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import type { ReactNode } from "react";
-import "../src/styles.css";
+import "./globals.css";
 
 const dmSans = localFont({
   src: "./fonts/dm-sans-variable.woff2",

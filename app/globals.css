@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-paper: #f8f4ed;
+  --color-paper-light: #fdfaf4;
+  --color-ink: #181816;
+  --color-muted: #6d6962;
+  --color-red: #e5382e;
+  --color-line: rgb(24 24 22 / 22%);
+  --color-line-dark: rgb(244 240 232 / 24%);
+  --font-sans: var(--font-dm-sans), "DM Sans", Arial, sans-serif;
+  --font-display: var(--font-archivo-black), Impact, sans-serif;
+  --animate-portrait-enter: portrait-enter 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-copy-enter: copy-enter 720ms 100ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    color: var(--color-paper-light);
+    background: var(--color-red);
+  }
+}
+
+@keyframes portrait-enter {
+  from {
+    opacity: 0;
+    transform: translateX(-11%) scale(1.45);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-11%) scale(1.42);
+  }
+}
+
+@keyframes copy-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 820px) {
+  html {
+    scroll-padding-top: 62px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
