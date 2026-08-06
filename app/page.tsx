@@ -19,7 +19,7 @@ const featuredProjects = [
     image: "/assets/projects/calculaderia.png",
     imageAlt: "Calculaderia home page showing a library of financial calculators",
     links: [
-      { label: "Visit website", href: "https://www.calculaderia.com.br" },
+      { label: "Visit website", href: "https://www.calculaderia.com.br/en" },
       {
         label: "View source",
         href: "https://github.com/saulodefaria/calculaderia",
@@ -32,7 +32,7 @@ const featuredProjects = [
     category: "Team estimation tool",
     description:
       "A simple planning poker app for remote teams. Create a room, share the link, vote, and move on without turning estimation into another meeting about the tool.",
-    proof: ["Real-time rooms", "Built for remote teams"],
+    proof: ["Real-time rooms", "Powered by WebSockets"],
     image: "/assets/projects/planning-poker.png",
     imageAlt: "Planning Poker room interface for agile estimation",
     links: [
@@ -51,7 +51,7 @@ const moreProjects = [
     title: "Guia Melhor Review",
     category: "Review and publishing platform",
     description:
-      "A review site that helps people compare products without opening dozens of tabs. Behind it is an AI-assisted workflow for research, writing, and publishing.",
+      "A review site that helps people compare products without opening dozens of tabs. Behind it is a fully automated AI workflow for research, writing, and publishing.",
     proof: "~100 monthly users",
     image: "/assets/projects/guia-melhor-review.png",
     imageAlt: "Guia Melhor Review website showing product review guides and comparisons",
@@ -86,20 +86,21 @@ const experience = [
   {
     company: "Shippo",
     period: "2025—Now",
-    role: "Senior Software Engineer",
+    role: "Full Stack Engineer",
     summary:
-      "I work on the financial systems behind a global shipping platform, with a focus on reliability and performance.",
+      "Started in the the financial systems behind a global shipping platform, now building fullfilment services: pick, pack, print and verify.",
     outcomes: [
       "Drove a critical workflow from 37 incidents to zero.",
       "Reduced invoice-save P99 latency by as much as 48.3%.",
-      "Cut $5K+ charge processing from 27.1s to 6.5s.",
+      "Cut charge processing from 27.1s to 6.5s.",
+      "Led the development of Click to Print.",
     ],
-    stack: "Ruby · TypeScript · PostgreSQL · Distributed systems",
+    stack: "Python · React · TypeScript · Go · PostgreSQL · Kafka · Kubernetes · Distributed systems",
   },
   {
     company: "Heal.me",
     period: "2024—2025",
-    role: "Senior Software Engineer",
+    role: "Senior Software Engineer | Engineering Manager",
     summary:
       "I led a three-engineer squad improving how practitioners build their websites, take payments, and get found.",
     outcomes: [
@@ -108,13 +109,13 @@ const experience = [
       "Improved checkout conversion by 21% and average cart value by 11%.",
       "Brought search latency from 20s to under 3s.",
     ],
-    stack: "React · TypeScript · Node.js · Product experimentation",
+    stack: "React · Ruby on Rails · Stripe · SEO",
   },
   {
     company: "Sua Quadra",
     period: "2023—2024",
-    role: "Senior Software Engineer",
-    summary: "I worked on the marketplace foundations behind search growth, analytics, and data quality.",
+    role: "Full Stack Engineer",
+    summary: "I worked on the marketplace growth initiatives, delivering strong results in SEO and organic traffic.",
     outcomes: [
       "Scaled indexed pages from 5K to 3M.",
       "Increased organic traffic by 65%.",
@@ -128,7 +129,8 @@ const experience = [
     role: "Product Manager",
     summary: "As a product manager, I led seven engineers across growth, operations, and marketplace projects.",
     outcomes: [
-      "Launched a channel worth 15% of annual revenue.",
+      "Launched a new channel worth 15% the company's annual revenue.",
+      "Generated seven figures in new annual revenue.",
       "Reduced manual operations work by 66%.",
       "Cut bus-stop mapping delays by 50%.",
     ],
@@ -137,7 +139,7 @@ const experience = [
   {
     company: "2S Nutrition",
     period: "2019—2022",
-    role: "Founder",
+    role: "Founder & Software Engineer",
     summary:
       "I built a direct-to-consumer nutrition company, including the product, software, growth, and day-to-day operations.",
     outcomes: [
@@ -145,7 +147,7 @@ const experience = [
       "Built subscriptions and LTV-focused retention systems.",
       "Improved revenue per session by 47% through funnel work.",
     ],
-    stack: "Company building · E-commerce · Retention · Analytics",
+    stack: "Company building · E-commerce · Growth · Payments · Analytics",
   },
   {
     company: "Mr A Tech",
@@ -156,8 +158,9 @@ const experience = [
     outcomes: [
       "Earned an NPS of 100 across client work.",
       "Used product experiments to improve ARPU by as much as 60%.",
+      "Worked on several projets, from frontend, infra, databases and integrations.",
     ],
-    stack: "PHP · Node.js · React · Product consulting",
+    stack: "PHP · Node.js · React · Consulting",
   },
 ];
 
@@ -169,12 +172,12 @@ const principles = [
   },
   {
     number: "02",
-    title: "Keep it understandable",
+    title: "Keep it simple",
     copy: "Good software should be easy for the next person to reason about, operate, and change.",
   },
   {
     number: "03",
-    title: "Check what happened",
+    title: "Iterate quickly",
     copy: "Talk to users, read the data, and check production. Assumptions get better when they meet reality.",
   },
 ];
@@ -285,7 +288,7 @@ export default function HomePage() {
               running in production.
             </p>
             <p className="mt-5.75 mb-0 border-t border-line pt-5.25 text-[.93rem] font-[780]">
-              Senior Software Engineer <span className="font-[560] text-muted">at Shippo</span>
+              Full Stack Engineer <span className="font-[560] text-muted">at Shippo</span>
             </p>
 
             <div className="mt-8.5 flex flex-wrap gap-3 max-[520px]:w-full" aria-label="Primary actions">
@@ -334,8 +337,8 @@ export default function HomePage() {
                 Things I&apos;ve built.
               </h2>
               <p className="mt-6.25 mb-0 max-w-92.5 text-base leading-[1.55] text-muted">
-                A few products I&apos;ve built for people to use—not just demos. They range from financial tools and
-                team collaboration to AI and computer vision.
+                A few products I&apos;ve built for people to use for free. They range from financial tools and team
+                collaboration to AI and computer vision.
               </p>
             </div>
           </div>
@@ -506,7 +509,9 @@ export default function HomePage() {
           className="grid grid-cols-[minmax(0,1fr)_minmax(260px,.34fr)] items-end gap-[clamp(50px,9vw,150px)] bg-red px-[clamp(24px,5vw,80px)] py-[clamp(80px,9vw,140px)] text-paper-light max-[1100px]:grid-cols-[1fr_minmax(230px,.34fr)] max-[820px]:grid-cols-1 max-[820px]:items-start max-[520px]:px-5.5"
           id="contact">
           <div>
-            <p className={`${kickerClass} text-ink`}>Elsewhere</p>
+            <p className={`m-0 text-[.68rem] font-[820] uppercase leading-[1.4] tracking-[.13em] text-black`}>
+              Elsewhere
+            </p>
             <h2
               className={`${displayHeadingClass} mt-6.75 max-w-242.5 text-[clamp(3rem,6.2vw,7rem)] leading-[.9] max-[520px]:text-[clamp(2.85rem,14vw,4.5rem)]`}>
               Find me online.
