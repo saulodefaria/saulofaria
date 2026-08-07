@@ -88,7 +88,7 @@ const experience = [
     period: "2025—Now",
     role: "Full Stack Engineer",
     summary:
-      "Started in the the financial systems behind a global shipping platform, now building fullfilment services: pick, pack, print and verify.",
+      "Started in the financial systems behind a global shipping platform, now building fulfillment services: pick, pack, print, and verify.",
     outcomes: [
       "Drove a critical workflow from 37 incidents to zero.",
       "Reduced invoice-save P99 latency by as much as 48.3%.",
@@ -129,7 +129,7 @@ const experience = [
     role: "Product Manager",
     summary: "As a product manager, I led seven engineers across growth, operations, and marketplace projects.",
     outcomes: [
-      "Launched a new channel worth 15% the company's annual revenue.",
+      "Launched a new channel worth 15% of the company's annual revenue.",
       "Generated seven figures in new annual revenue.",
       "Reduced manual operations work by 66%.",
       "Cut bus-stop mapping delays by 50%.",
@@ -158,7 +158,7 @@ const experience = [
     outcomes: [
       "Earned an NPS of 100 across client work.",
       "Used product experiments to improve ARPU by as much as 60%.",
-      "Worked on several projets, from frontend, infra, databases and integrations.",
+      "Worked on several projects across frontend, infrastructure, databases, and integrations.",
     ],
     stack: "PHP · Node.js · React · Consulting",
   },
