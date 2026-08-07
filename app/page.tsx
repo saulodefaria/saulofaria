@@ -85,6 +85,7 @@ const moreProjects = [
 const experience = [
   {
     company: "Shippo",
+    website: "https://goshippo.com/",
     period: "2025—Now",
     role: "Full Stack Engineer",
     summary:
@@ -99,6 +100,7 @@ const experience = [
   },
   {
     company: "Heal.me",
+    website: "https://heal.me/",
     period: "2024—2025",
     role: "Senior Software Engineer | Engineering Manager",
     summary:
@@ -113,6 +115,7 @@ const experience = [
   },
   {
     company: "Sua Quadra",
+    website: "https://www.suaquadra.com.br/",
     period: "2023—2024",
     role: "Full Stack Engineer",
     summary: "I worked on the marketplace growth initiatives, delivering strong results in SEO and organic traffic.",
@@ -125,6 +128,7 @@ const experience = [
   },
   {
     company: "Buser",
+    website: "https://www.buser.com.br/",
     period: "2021—2023",
     role: "Product Manager",
     summary: "As a product manager, I led seven engineers across growth, operations, and marketplace projects.",
@@ -459,7 +463,23 @@ export default function HomePage() {
                       {item.period}
                     </p>
                     <h3 className="m-0 font-display text-[clamp(2rem,3vw,3.5rem)] font-normal leading-[.95] tracking-[-.055em] max-[520px]:text-[2.7rem]">
-                      {item.company}
+                      {item.website ? (
+                        <a
+                          className="group inline-flex items-start gap-[.18em] transition-colors hover:text-red focus-visible:text-red focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red"
+                          href={item.website}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label={`Visit ${item.company} website`}>
+                          {item.company}
+                          <ArrowUpRightIcon
+                            className="mt-[.08em] size-[.38em] shrink-0 text-red opacity-75 transition-[opacity,transform] duration-160 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100 group-focus-visible:translate-x-0.5 group-focus-visible:-translate-y-0.5 group-focus-visible:opacity-100"
+                            aria-hidden="true"
+                            weight="bold"
+                          />
+                        </a>
+                      ) : (
+                        item.company
+                      )}
                     </h3>
                     <p className="mt-3.5 mb-0 text-[.78rem] font-[760] text-red">{item.role}</p>
                   </div>
