@@ -187,10 +187,10 @@ const principles = [
 ];
 
 const metrics = [
-  ["5K → 3M", "indexed pages"],
-  ["10K+", "customers from zero"],
   ["+ $10M", "annual revenue"],
+  ["10K+", "customers from zero"],
   ["37 → 0", "production incidents"],
+  ["5K → 3M", "indexed pages"],
 ];
 
 const kickerClass = "m-0 text-[.68rem] font-[820] uppercase leading-[1.4] tracking-[.13em] text-red";
