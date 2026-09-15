@@ -20,10 +20,6 @@ const featuredProjects = [
     imageAlt: "Calculaderia home page showing a library of financial calculators",
     links: [
       { label: "Visit website", href: "https://www.calculaderia.com.br/en" },
-      {
-        label: "View source",
-        href: "https://github.com/saulodefaria/calculaderia",
-      },
     ],
   },
   {
