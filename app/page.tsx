@@ -83,7 +83,7 @@ const experience = [
     company: "Shippo",
     website: "https://goshippo.com/",
     period: "2025—Now",
-    role: "Full Stack Engineer",
+    role: "Senior Software Engineer",
     summary:
       "Started in the financial systems behind a global shipping platform, now building fulfillment services: pick, pack, print, and verify.",
     outcomes: [
@@ -288,7 +288,7 @@ export default function HomePage() {
               running in production.
             </p>
             <p className="mt-5.75 mb-0 border-t border-line pt-5.25 text-[.93rem] font-[780]">
-              Full Stack Engineer <span className="font-[560] text-muted">at Shippo</span>
+              Senior Software Engineer <span className="font-[560] text-muted">at Shippo</span>
             </p>
 
             <div className="mt-8.5 flex flex-wrap gap-3 max-[520px]:w-full" aria-label="Primary actions">
